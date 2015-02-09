@@ -2,7 +2,7 @@
   "name": "react-person",
   "version": "0.0.1",
   "description": "CRUD in Flux architecture.",
-  "repository": "",
+  "repository": "https://github.com/danswater/react-person.git",
   "main": "js/app.js",
   "dependencies": {
     "flux": "^2.0.1",
@@ -13,11 +13,17 @@
   },
   "devDependencies": {
     "browserify": "^6.2.0",
+    "ejs": "1.0.0",
     "envify": "^3.0.0",
+    "express": "4.7.4",
+    "glob": "4.0.5",
     "jest-cli": "~0.1.17",
+    "less-middleware": "1.0.3",
     "reactify": "^0.15.2",
+    "request": "^2.45.0",
     "uglify-js": "~2.4.15",
-    "watchify": "^2.1.1"
+    "watchify": "^2.1.1",
+    "zero-config": "4.0.0"
   },
   "scripts": {
     "start": "watchify -o js/bundle.js -v -d .",
