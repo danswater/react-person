@@ -6,10 +6,9 @@
  - Create action creator to integrate to server
  - Use less/sasss/css or css preprocessor
 
- ##How to start
- ```
+##How to start
+```
  	npm install
-
  	npm start
 
- ```
+```
