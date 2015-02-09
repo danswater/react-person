@@ -1,0 +1,20 @@
+{
+  "name": "react-person",
+  "version": "0.0.1",
+  "authors": [
+    "danswater"
+  ],
+  "description": "CRUD in Flux Architecture",
+  "main": "js/app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2"
+  }
+}
