@@ -38,7 +38,6 @@ var PersonForm = React.createClass( {
     'render' : function () {
         return (
             <div>
-                <h2>Add person</h2>
                 <form className="PersonForm" onSubmit={ this.handleSubmit }>
                     <div className="form-group">
                         <input type="text" className="form-control" placeholder="firstname" name="firstname" ref="firstname" />
@@ -53,7 +52,7 @@ var PersonForm = React.createClass( {
                         <input type="date" className="form-control" placeholder="birthday" name="birthday" ref="birthday" />
                     </div>
                     <div className="form-group">
-                        <input type="text" className="form-control" placeholder="age" name="age" ref="age" />
+                        <input type="number" className="form-control" placeholder="age" name="age" ref="age" />
                     </div>
                     <div className="form-group">
                         <input type="text" className="form-control" placeholder="current location" name="current-location" ref="currentLocation" />
@@ -61,7 +60,7 @@ var PersonForm = React.createClass( {
                     <div className="form-group">
                         <input type="text" className="form-control" placeholder="remarks" name="remarks" ref="remarks" />
                     </div>
-                    <input type="submit" className="btn btn-default" name="Submit" />
+                    <input type="submit" className="btn btn-default" name="Save" />
                 </form>
             </div>
         );

@@ -5,6 +5,7 @@ var PersonActions = require( '../actions/PersonActions' );
 
 var PersonTable = require( './Table' );
 var PersonForm  = require( './Form' );
+var Modal       = require( './Modal' );
 
 function getPersonState () {
     return {
@@ -42,18 +43,29 @@ var PersonBox = React.createClass( {
     },
 
     'render' : function () {
+
+        var form = (
+            <PersonForm
+                onUserSubmit={ this.handleUserSubmit }
+                newPerson={ this.state.allPerson } />
+        );
+
+        var table;
+        if ( this.state.allPerson.length !== 0 ) {
+            table = (
+                <PersonTable
+                    handleDeletePerson = { this.handleDeletePerson }
+                    persons            = { this.state.allPerson }
+                    removePerson       = { this.state.removePerson } />
+            );
+        } else {
+            table = <p>No data to display</p>;
+        }
+
         return (
             <div className="PersonBox">
-                <PersonForm
-                    onUserSubmit={ this.handleUserSubmit }
-                    newPerson={ this.state.allPerson }
-                />
-
-                <PersonTable
-                    handleDeletePerson={ this.handleDeletePerson }
-                    persons={ this.state.allPerson }
-                    removePerson = { this.state.removePerson }
-                />
+                <Modal label="Add Person" title="Add Person">{ form }</Modal>
+                { table }
             </div>
         );
     }

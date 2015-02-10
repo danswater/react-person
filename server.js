@@ -17,19 +17,6 @@ app.set( 'view engine', 'ejs' );
 app.set( 'views', process.cwd() );
 app.engine( 'html', require( 'ejs').renderFile );
 
-app.get( '/dev.html', function ( request, response, next ) {
-	glob( 'js/**/*.js', function ( error, files ) {
-		if ( error ) {
-			return next( error );
-		}
-
-		files = files.filter( function ( value ) {
-			return !value.match( /-test\.js$/ );
-		} );
-
-		response.render( 'dev.html', { 'files' : files } );
-	} );
-} );
 
 app.use( express.static( process.cwd() ) );
 
